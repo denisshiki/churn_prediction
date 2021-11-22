@@ -6,73 +6,69 @@ to drawn our scenarios
 
 The result of our project is this scenario.
 
-| __Best Scenario__ | __Real Scenario__ | __Worst Scenario__ |
-| ----------------- | ----------------- | ----------------- | 
-| R$ 288.554.280,06 | R$ 286.397.838,89 | R$ 287.476.064,00 |
+![Captura de tela de 2021-11-22 09-52-00](https://user-images.githubusercontent.com/46419374/142865055-0fd66d46-168e-4c9c-be3b-5b883ea8c541.png)
 
 **The project is located in the following link:** https://github.com/denisshiki/churn_prediction/blob/main/churn.ipynb
 ___
-### 🏢 Business Context:
+### Business Context:
 
-A Houssman Store é uma plataforma digital que tem como modelo de negócio e a venda de produtos diversos, sendo que para melhorar o seu faturamentos, eles começaram a utilizam a tecnologia no intuito de gerar dados, tendo este dois objetivos; analisar as melhores oportunidades de negócios, aumento do faturamento a partir destes.
+Topbank is a company that offer bank a diverse type of services to other countries of europe, starting for business loans, insurance, wealth management and so on.
 
-O objetivo do case é fornecer um modelo de previsão da venda de produtos, dando este suporte para as futuras decisões da empresa, podendo esta acatar ou não as previsões feitas por esse modelo, assim como verificar se este condiz com a realidade das vendas caso a empresa resolva seguir com este modelo.
+The major product of the company is the bank account, using this service the client can deposit it's salary, make loans, see the balance etc. and this bank account has a limit of 12 months if that limit expires he has to renovate the contract in order to use the company services.
 
 ___
-### 👨‍💼 Questão do negócio:
+### Business Question:
 
-Como você é um dos poucos integrantes da equipe de ciência de dados da empresa, em um belo dia os gerentes começaram a te ligar pedindo uma previsão de vendas nas próximas seis semanas, antes de iniciar executando imadiatamente a tarefa que lhe foi cabida, você primeiro conversou com os gerentes, percorrendo os três passos abaixo:
+You belong to the data science team and your job is to prevent the customers to leave the company, but before solve the problem you have to ask those tree questions.
 
-- __Motivação:__ qual foi a motivação que os gerentes tiveram para realizar essa requisição. Durante a conversa com estes percebemos que a motivação foi o pedido feito pelo CEO da empresa.
+- __Motivation:__ What is the motivation of this problem, so we ask to our superiors about who made this problem and what the context, different from other problems, in this project the motivation is more simple and easy to understand. 
 
-- __Causa Raiz:__ Entendido a motivação iremos na causa raiz, ou seja, iremos conversar com o CEO e verificar o porque este realizou esta requisição, ao entrarmos em contato com este, vimos que ele realizou esse pedido pois gostaria de utilizar o lucro gerado para reformar as lojas preexistentes.
+- __Root Case:__ After understanding the motivation of the problem that we'll try to understand this root case, so we talk to other people of the company and discover that the income of the company is decreasing and one of the main case is because the clients are leaving the company.
  
-- __Formato da Solução:__ Entendido a causa raiz com o CEO, iremos agora combinar o formato de entrega com ele, como no mundo nos negócios tudo é negociável, dissemos  que para ter uma velocidade maior, iremos entregar nesse primeiro ciclo uma tabela contendo o faturamento total previsto com o pior e melhor cenário, para assim ele ter uma idéia do quanto de dinheiro irá chegar na empresa para então realizar a decisão de reformar ou não as lojas ou em quais lojas reformar.
+- __Deploy:__ Understanding the root case, we'll negotiate about the product that we'll deploy, because it's our first CRISP cycle we'll deploy only a result and in our next cycles we'll deliver a better data product.
+
 ___
 ### Ciclo CRISP
 
-Um método que utilizaremos tanto neste como em outros projetos de portfólio é o método CRISP (Cross Industry Standard Process for Data Mining,)presente no link abaixo: <br>
+Like other projects in this we'll use the CRIP method, for further explanation see the link below: <br>
 https://www.ibm.com/docs/en/spss-modeler/SaaS?topic=dm-crisp-help-overview
 
-O objetivo desse método é passar pela mesma tarefa várias vezes, tendo cada ciclo "end to end", nos dando esse ciclo uma velocidade de entrega assim como o mapeamento de possíveis problemas a serem ocorridos futuramente, sendo que o ciclo que montamos nesse projeto tem o seguinte desenho esquemático:
+The goal of this method is to repeat the cycle until the project is finished, each cycle is composed by end to end projects and delivered the data product according to what we promissed, and each cycle has follow this schema below:
 
 ![Captura de tela de 2021-10-22 16-08-23](https://user-images.githubusercontent.com/46419374/138510162-7bf05413-c5ad-495f-94bd-aebbfb8fc897.png)
 
-**Observação:** Apesar do ciclo ser o mesmo é bom lembrar que a manipulação dos dados depende do tipo de problema que queremos resolver, portanto é recomendado entender os dados antes de fazer qualquer alteração.
-
-- **Questão e Entendimento do Negócio:** Nessas etapas como dito anteriormente realizaremos uma conversa com as outras equipes para identificar a fonte do problema e definimos o formato da solução.
+- **Business Understanding:** This stage we define talk to other teams in order to identify the problem and the solution that we'll deploy.
  
-- **Coleta de Dados:** Neste realizaremos ou uma busca do banco de dados da empresa ou então buscaremos dados fora destas, sendo que nesse projeto os dados foram fornecidos pela plataforma "Kaggle".
+- **Data mining:** In this moment we'll search for the data that will help us in this project, in this exercise we'll use the data provided by the Kaggle platform.
  
-- **Limpeza dos Dados:** Realizaremos um preenchimento dos dados faltantes, assim como verificaremos os tipos de dados, estatísticas descritivas e renomeação de colunas.
+- **Data Cleaning:** In this stage we'll clean the data removing the NaN values and we'll verify the type of our data, descriptive statistics and columns renaming.
 
-- **Exploração dos Dados:** Essa é uma das etapas em que realizaremos o levantamento das hipóteses no intuito de gerar "insights" que sejam escaláveis para a empresa, outro aspecto que iremos realizar é a criação de variáveis e verificação de hipóteses.
+- **Data Exploration:** We'll make and business hipothesis in order to give us scalable insights for the company this will help us too se the data in other perspective and give more ideas about future projects.
 
-- **Modelagem dos Dados:** Nesta realizaremos a rescalonação, transformação e eliminação "outliers" em algumas variáveis, tendo este o intuito de tratar os dados para os algoritmos de "Machine Learning". 
+- **Data Modelling:** This we'll make the transformation, reescaling and outliers verification in some variables, tendo este o intuito de tratar os dados para os algoritmos de "Machine Learning". 
 
-- **Algoritmo de Machine Learning:** Nesta aplicaremos alguns algoritmos utilizando o método "Cross Validation".
+- **Machine Learning Algorithms:** We'll apply some machine learning algorithms and metrics in order to evaluate wich is the best.
 
-- **Avaliação de Algoritmos:** Neste analisamos a performance dos algoritmos e então verificamos qual o seu resultado monetário.
+- **Machine Learning Evaluation:** After select our model we will evaluat how is our income scenarios, this is an important step bacause it will determined if we'll follow our project or no.
  
 ___
-### 📚 Dados:
+### Data:
 
-Os dados foram extraídos da plataforma "Kaggle", usando o link abaixo:
-
+The data were extrated from the kaggle platform in the link below: 
 https://www.kaggle.com/c/rossmann-store-sales
 
 Contendo os seguintes atributos:
 
 |***Atributo*** | ***Descrição*** |
 | -------- | --------- |
-|**Id**| Identificação que representa a dupla (data, loja).|
-|**Store**| Identificação da loja |
-|**Sales**| vendas da loja naquele dia |
-|**Customers**|Número de clientes no dia |
-|**Open**| Indicador se a loja está aberta ou fechada: 0 = fechada, 1 = aberta |
-|**StateHoliday**| Indicador da presença de feriados, sendo estes. a = ferados públicos, b = Páscoa, c = Natal, 0 = Nenhum |
-|**SchoolHoliday**| Indica se há ou não a presença de feriados escolares: 0 = não, 1 = sim. |
-|**StoreType**| diferentes tipos de lojas, sendo estas a, b, c, d |
+|**RowNumber**| Number of the column.|
+|**CustomerID**| Id of the client |
+|**Surname**| Client surname |
+|**CreditScore**|The core credit of the client |
+|**Geography**| The country that he/she lives |
+|**Gender**| The client gender |
+|**Age**| The client age |
+|**Tenure**| the time o tipos de lojas, sendo estas a, b, c, d |
 |**Assortment**| Indica a variedade de produtos por levels, sendo esses: a = básico, b = extra, c = extendido |
 |**CompetitionDistance**|distância em metros com a loja competidora próxima |
 |**CompetitionOpenSince[Month/Year]**| Indica o o ano e mês aproximado que o competidor mais próximo abrir a loja |
@@ -82,7 +78,7 @@ Contendo os seguintes atributos:
 |**PromoInterval**| Descreve os meses consecutivos que a loja participou da promoção.| 
 
 ___
-### 💼 Premissas do negócio:
+### Business Premisse:
 
 Antes de analisarmos os dados teremos que conhecer do negócio que estamos lidando, para isso podemos tanto conversar com outras equipes da empresa, realizando uma reunião com estas no intuito de tirar dúvidas e gerar "insights" ou então podemos estudar o negócio e gerar essas dúvidas e ideias nós mesmos. Como atualmente não temos contato com outras áreas iremos optar por pesquisar sobre o negócio e então retirar nossos "insights".
 
