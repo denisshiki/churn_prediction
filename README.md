@@ -1,4 +1,4 @@
- # Churn Prediction
+ # Churn Prediction (Readme In progress)
 
 Our goal in this project is to provide a prediction in order to prevent future clients to leave the company. 
 To achieve this intention we'll use some machine learning algorithms to anticipate the probability of the customer to leave after that well use the Gain curve
